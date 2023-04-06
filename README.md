@@ -33,5 +33,18 @@
    In this notebook, I connected HANA DB with Python using python Interface - hana_ml and hdbcli. To know more about this connection use this [link](https://help.sap.com/docs/SAP_HANA_PLATFORM/0eec0d68141541d1b07893a39944924e/d12c86af7cb442d1b9f8520e2aba7758.html?version=2.0.02). Then the Data from Hana DB is Extracted and saved as pandas DF (You can train the model using Hana_ml Algorithms as well, without converting it to pandas). Explore and transform the data. I used RandomForest and Logistic Regression as ML model. By comparing both the algorithms, RandomForest provides more accuracy. The model saved as pkl file.
         
 ### app.py:
-    
+
+   It is a Streamlit application, which consumes the trained model for prediction. User can use this application predict the failure of the machine by providing the required parameters. We can able to deploy this application in any of the cloud environment, in this project I deployed this application in the streamlit cloud, you can access the applicaiton using this [link](https://karthikeyan-31-machine-failure-prediction---hana-db-app-3uw6tr.streamlit.app/). If you need to automate the process of prediction by connecting the application with s/4 Hana, you need to deploy this application in BTP Cloud. Using ISLM we can easily connect he application with s/4 hana.
+   
+### requirements.py
+
+   It contains the python libraries to run the application.
+   
+### rfc.pkl 
+   
+   It is pikel file of the Trained RandomForest Model.
+
+### test.csv
+
+   This csv file contains the sample data of machine. This application use this data for demo predictions.
 
